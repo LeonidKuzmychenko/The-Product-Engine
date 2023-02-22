@@ -30,7 +30,7 @@ public class Consumer implements Runnable {
                     files.put(key, new ArrayList<>());
                     for (File file : list) {
                         System.out.println(file);
-                        writer.println(file.getName());
+                        writer.println(file.getAbsolutePath());
                         writer.flush();
                     }
                 }

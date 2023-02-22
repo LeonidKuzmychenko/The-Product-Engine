@@ -69,8 +69,8 @@ public class Client implements Runnable {
             Thread cons = new Thread(new Consumer(files, writer, key));
             cons.start();//TODO надо придумать, как уведомлять поток о том, что поиск закончен, чтобы прибить его
             requests.add(searchRequest);
-            reader.close();
         }
+        reader.close();
         writer.close();
     }
 
